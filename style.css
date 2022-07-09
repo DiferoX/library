@@ -248,9 +248,9 @@
   color: white;
   background-image: linear-gradient(to top left, purple, rgb(0, 120, 175), rgb(0, 0, 100), rgb(0, 0, 100), rgb(0, 0, 100));
   border-radius: 25px;
-  border-right: 8px solid aqua;
-  border-bottom: 8px solid aqua;
-  box-shadow: 5px 5px 10px black;
+  border-right: 5px solid aqua;
+  border-bottom: 5px solid aqua;
+  box-shadow: 5px 5px 10px aqua;
   padding: 25px;
 }
 
@@ -307,13 +307,6 @@
   width: 110px;
 }
 
-.content2
-{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 25px;
-}
-
 /* ================= F O R M ================= */
 
 .formContainer
@@ -331,11 +324,11 @@
   position: absolute;
   right: 38%;
 
-  box-shadow: 0 0 20px rgb(0, 0, 0),
-  0 0 40px rgb(0, 0, 0),
-  0 0 60px rgb(0, 0, 0),
-  0 0 80px rgb(0, 0, 0),
-  0 0 100px rgb(0, 0, 0);
+  box-shadow: 0 0 20px aqua,
+              0 0 40px aqua,
+              0 0 60px #222,
+              0 0 80px #111,
+              0 0 100px #000;
 }
 
 .formContainer legend
@@ -372,6 +365,83 @@
   text-align: center;
   border-top: 5px solid white;
 }
+
+
+.checkB
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+input[type="checkbox"]
+{
+  position: relative;
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  outline: none;
+  background: #111;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.1),
+              5px 5px 10px rgba(0, 0, 0, 1),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+              0 0 0 2px #1f1f1f;
+  transition: .5s;
+}
+
+input[type="checkbox"]:checked
+{
+  background-color: aqua;
+}
+
+input[type="checkbox"]::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(to top, #000, #555);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: .5s;
+}
+
+input[type="checkbox"]:checked::before
+{
+  left: 40px;
+}
+
+input[type="checkbox"]::after
+{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: calc(50% - 2px);
+  width: 20px;
+  height: 4px;
+  border-radius: 20%;
+  background: #555;
+  transition: .5s;
+}
+
+input[type="checkbox"]:checked::after
+{
+  left: calc(60px + 40px);
+  background: aqua;
+  box-shadow: 0 0 5px aqua,
+              0 0 15px aqua,
+              0 0 30px aqua;
+}
+
 
 .formBtn button
 {
