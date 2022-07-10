@@ -1,4 +1,4 @@
-let myLibrary = [];
+let myLibrary = [1,2,3,4];
 let book;
 
 
@@ -51,12 +51,23 @@ function addCard()
   h4.textContent = book.author;
 
   let pag = document.createElement('p');
-  pag.textContent = book.pages;
+  pag.textContent = "Number of pages: " + book.pages;
 
-  let box = document.createElement('div');
-  box.classList.add('checkB');
 
-  let check = document.createElement('input[type="checkbox"]');
+  let divBox = document.createElement('div');
+  divBox.classList.add('checkB');
+
+  let txt = document.createElement('p');
+  txt.textContent = "¿Is it been read?";
+
+  let checkbox = document.createElement('input');
+  checkbox.classList.add('checkRead');
+  checkbox.type = 'checkbox';
+  let x = checked(); // True or False
+  checkbox.checked = x;
+
+
+  sidebar();
 
 
   container.appendChild(content);
@@ -65,8 +76,26 @@ function addCard()
   content.appendChild(h4);
   content.appendChild(pag);
 
-  content.appendChild(box);
-  box.appendChild(check);
+  content.appendChild(divBox);
+  divBox.appendChild(txt);
+  divBox.appendChild(checkbox);
+}
+
+function checked()
+{
+  if (document.getElementById('checked').checked == true)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+function sidebar()
+{
+  
 }
 
 

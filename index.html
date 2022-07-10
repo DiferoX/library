@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/card.png">
+    <link rel="icon" href="images/reader.svg">
   </head>
 
   <body>
@@ -15,7 +15,7 @@
 
         <div class="head1">
           <div class="infoUser">
-            <img src="images/hacker.jpg" alt="" id="img">
+            <img src="images/reader.svg" alt="" id="img">
             <div class="txtInfo">
               <p id="txt1">Library</p>
             </div>
@@ -40,27 +40,26 @@
       <div class="sidebar">
 
         <div class="dashboard">
-          <img src="" alt="">
+          <img src="images/info.svg" alt="">
           <h1>Dashboard</h1>
         </div>
 
         <div class="menu">
           <ul>
             <div class="liMenu">
-              <img src="" alt="">
-              <li>Home</li>
+              <img src="images/book.svg" alt="">
+              <li>Books</li>
+              <p id="books">0</p>
             </div>
             <div class="liMenu">
-              <img src="" alt="">
-              <li>Profile</li>
+              <img src="images/check-double.svg" alt="">
+              <li>Read Books</li>
+              <p id="readBooks">0</p>
             </div>
             <div class="liMenu">
-              <img src="" alt="">
-              <li>Messages</li>
-            </div>
-            <div class="liMenu">
-              <img src="" alt="">
-              <li>History</li>
+              <img src="images/book-open.svg" alt="">
+              <li>Pages</li>
+              <p id="totalPages">0</p>
             </div>
           </ul>
         </div>
@@ -70,7 +69,7 @@
       <div class="content">
     
         <div class="artContent">
-          <h3>Your Project</h3>
+
           <div class="article">
 
             <div class="card" id="cardIcon">
@@ -82,7 +81,7 @@
             <div class="card">
               <h3>El señor de los anillos (Trilogía)</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>600 pag</p>
+              <p>Number of pages: 600</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
                 <input type="checkbox" class="checkRead">
@@ -92,47 +91,27 @@
             <div class="card">
               <h3>El señor de los anillos (Trilogía)</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>200 pag</p>
+              <p>Number of pages: 200</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead">
+                <input type="checkbox" class="checkRead" checked>
               </div>
             </div>
 
             <div class="card">
               <h3>El señor de los anillos (Trilogía)</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>200 pag</p>
+              <p>Number of pages: 200</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead">
+                <input type="checkbox" class="checkRead" checked>
               </div>
             </div>
 
             <div class="card">
               <h3>El señor de los anillos (Trilogía)</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>200</p>
-              <div class="checkB">
-                <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead">
-              </div>
-            </div>
-
-            <div class="card">
-              <h3>El señor de los anillos (Trilogía)</h3>
-              <h4>J. R. R. Tolkien</h4>
-              <p>200</p>
-              <div class="checkB">
-                <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead">
-              </div>
-            </div>
-
-            <div class="card">
-              <h3>El señor de los anillos (Trilogía)</h3>
-              <h4>J. R. R. Tolkien</h4>
-              <p>200</p>
+              <p>Number of pages: 200</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
                 <input type="checkbox" class="checkRead">
@@ -157,9 +136,9 @@
             <label for="numPages">Number of Pages</label>
             <input type="number" id="numPages" required min="0" max="9999">
 
-            <div class="checkB">
+            <div class="checkB2">
               <label for="read">¿Is it been read?</label>
-              <input type="checkbox" class="checkRead">
+              <input type="checkbox" class="checkRead2" id="checked">
             </div>
           
             <div class="formBtn">
