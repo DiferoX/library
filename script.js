@@ -1,5 +1,6 @@
 let myLibrary = [0,1,2,3];
 let book;
+let sumPages = 0;
 
 
 function openForm()
@@ -101,7 +102,14 @@ function checked()
 /*
 function sidebar()
 {
-  
+  document.getElementById('books').textContent = myLibrary.length;
+
+  for (let i = 0; i = myLibrary; i++)
+  {
+    sumPages += myLibrary[i].pages;
+
+    document.getElementById('readBooks').textContent = sumPages;
+  }
 }
 */
 
