@@ -1,4 +1,4 @@
-let myLibrary = [1,2,3,4];
+let myLibrary = [0,1,2,3];
 let book;
 
 
@@ -15,11 +15,13 @@ function closeForm()
 }
 
 
-function Book(title, author, pages) // the constructor...
+function Book(title, author, pages, check, id) // the constructor...
 {
   this.author = author;
   this.title = title;
   this.pages = pages;
+  this.check = check;
+  this.id = id;
 }
 
 function addBookToLibrary() 
@@ -27,13 +29,16 @@ function addBookToLibrary()
   let title = document.getElementById('title').value;
   let author = document.getElementById('author').value;
   let pages = document.getElementById('numPages').value;
+  let check = document.getElementById('checked').checked;
+  let id = myLibrary.length + 1;
+  console.log (id);
 
-  book = new Book(title, author, pages);
+  book = new Book(title, author, pages, check, id);
 
   myLibrary.push(book);
 
-  //console.log(book);
-  //console.log(myLibrary);
+  console.log(book);
+  console.log(myLibrary);
   addCard();
 }
 
@@ -67,7 +72,7 @@ function addCard()
   checkbox.checked = x;
 
 
-  sidebar();
+  //sidebar();
 
 
   container.appendChild(content);
@@ -93,9 +98,10 @@ function checked()
   }
 }
 
+/*
 function sidebar()
 {
   
 }
-
+*/
 
