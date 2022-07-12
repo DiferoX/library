@@ -76,7 +76,10 @@ function addCard()
 
   let closeImg = document.createElement('img');
   closeImg.src = 'images/cerrar.png';
+  //closeImg.onclick = 'eraser()';
   closeImg.classList.add('cardImg');
+
+  closeImg.addEventListener('click', 'eraser(this)');
 
 
   sidebar();
@@ -111,6 +114,17 @@ function checked()
   }
 }
 
+function change(a)
+{
+  console.log(a);
+}
+
+function eraser(btn)
+{
+  let eraserDiv = btn.parentNode;
+
+  eraserDiv.remove();
+}
 
 function sidebar()
 {
