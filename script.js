@@ -71,15 +71,16 @@ function addCard()
   let checkbox = document.createElement('input');
   checkbox.classList.add('checkRead');
   checkbox.type = 'checkbox';
+  //checkbox.onchange = ("change(this.checked)");
   let x = checked(); // True or False
   checkbox.checked = x;
 
   let closeImg = document.createElement('img');
   closeImg.src = 'images/cerrar.png';
-  //closeImg.onclick = 'eraser()';
   closeImg.classList.add('cardImg');
-
-  closeImg.addEventListener('click', 'eraser(this)');
+  
+  //closeImg.onclick = 'eraser(this);
+  //closeImg.addEventListener('click', change());
 
 
   sidebar();
@@ -102,21 +103,27 @@ function checked()
 {
   if (document.getElementById('checked').checked == true)
   {
-    sumReadBooks++;
-    document.getElementById('readBooks').textContent = sumReadBooks;
     return true;
   }
   else
   {
-    sumReadBooks--;
-    document.getElementById('readBooks').textContent = sumReadBooks;
     return false;
   }
 }
 
 function change(a)
 {
-  console.log(a);
+  //console.log(a);
+  if (a == true)
+  {
+    sumReadBooks++;
+    document.getElementById('readBooks').textContent = sumReadBooks;
+  }
+  else
+  {
+    sumReadBooks--;
+    document.getElementById('readBooks').textContent = sumReadBooks;
+  }
 }
 
 function eraser(btn)
