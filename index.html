@@ -59,7 +59,7 @@
             <div class="liMenu">
               <img src="images/book-open.svg" alt="">
               <li>Pages</li>
-              <p id="totalPages">0</p>
+              <p id="totalPages">5032</p>
             </div>
           </ul>
         </div>
@@ -81,41 +81,45 @@
             <div class="card">
               <h3>El señor de los anillos (Trilogía)</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>Number of pages: 600</p>
+              <p>Number of pages: 1500</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead">
+                <input type="checkbox" class="checkRead" onchange="checked()">
               </div>
+              <img class="cardImg" src="images/cerrar.png" alt="">
             </div>
 
             <div class="card">
-              <h3>El señor de los anillos (Trilogía)</h3>
-              <h4>J. R. R. Tolkien</h4>
-              <p>Number of pages: 200</p>
+              <h3>Game of Thrones</h3>
+              <h4>George R. R. Martin</h4>
+              <p>Number of pages: 672</p>
+              <div class="checkB">
+                <label for="read">¿Is it been read?</label>
+                <input type="checkbox" class="checkRead" checked onclick="checked()">
+              </div>
+              <img class="cardImg" src="images/cerrar.png" alt="">
+            </div>
+
+            <div class="card">
+              <h3>Harry Potter</h3>
+              <h4>J. K. Rowling</h4>
+              <p>Number of pages: 2550</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
                 <input type="checkbox" class="checkRead" checked>
               </div>
+              <img class="cardImg" src="images/cerrar.png" alt="">
             </div>
 
             <div class="card">
-              <h3>El señor de los anillos (Trilogía)</h3>
+              <h3>El Hobbit</h3>
               <h4>J. R. R. Tolkien</h4>
-              <p>Number of pages: 200</p>
-              <div class="checkB">
-                <label for="read">¿Is it been read?</label>
-                <input type="checkbox" class="checkRead" checked>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3>El señor de los anillos (Trilogía)</h3>
-              <h4>J. R. R. Tolkien</h4>
-              <p>Number of pages: 200</p>
+              <p>Number of pages: 310</p>
               <div class="checkB">
                 <label for="read">¿Is it been read?</label>
                 <input type="checkbox" class="checkRead">
               </div>
+              <img class="cardImg" src="images/cerrar.png" alt="">
             </div>
 
           </div>
@@ -142,7 +146,7 @@
             </div>
           
             <div class="formBtn">
-              <button id="cancel" onclick="closeForm()">Cancel</button>
+              <button type="reset" id="cancel" onclick="closeForm()">Cancel</button>
               <button id="acept" onclick="addBookToLibrary()">Acept</button>
             </div>
           </form>

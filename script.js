@@ -1,6 +1,7 @@
 let myLibrary = [0,1,2,3];
 let book;
-let sumPages = 0;
+let sumPages = 5032;
+let sumReadBooks = 2;
 
 
 function openForm()
@@ -32,15 +33,16 @@ function addBookToLibrary()
   let pages = document.getElementById('numPages').value;
   let check = document.getElementById('checked').checked;
   let id = myLibrary.length + 1;
-  console.log (id);
 
   book = new Book(title, author, pages, check, id);
 
   myLibrary.push(book);
 
-  console.log(book);
-  console.log(myLibrary);
+  //console.log(book);
+  //console.log(myLibrary);
   addCard();
+
+  closeForm();
 }
 
 function addCard()
@@ -72,8 +74,12 @@ function addCard()
   let x = checked(); // True or False
   checkbox.checked = x;
 
+  let closeImg = document.createElement('img');
+  closeImg.src = 'images/cerrar.png';
+  closeImg.classList.add('cardImg');
 
-  //sidebar();
+
+  sidebar();
 
 
   container.appendChild(content);
@@ -85,31 +91,33 @@ function addCard()
   content.appendChild(divBox);
   divBox.appendChild(txt);
   divBox.appendChild(checkbox);
+
+  content.appendChild(closeImg);
 }
 
 function checked()
 {
   if (document.getElementById('checked').checked == true)
   {
+    sumReadBooks++;
+    document.getElementById('readBooks').textContent = sumReadBooks;
     return true;
   }
   else
   {
+    sumReadBooks--;
+    document.getElementById('readBooks').textContent = sumReadBooks;
     return false;
   }
 }
 
-/*
+
 function sidebar()
 {
   document.getElementById('books').textContent = myLibrary.length;
 
-  for (let i = 0; i = myLibrary; i++)
-  {
-    sumPages += myLibrary[i].pages;
-
-    document.getElementById('readBooks').textContent = sumPages;
-  }
+  sumPages += Number(book.pages);
+  document.getElementById('totalPages').textContent = sumPages;
 }
-*/
+
 
